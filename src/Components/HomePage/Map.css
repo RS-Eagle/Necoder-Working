@@ -1,0 +1,12 @@
+.view{
+    opacity: 0;
+    transform: translateY(10px);
+    
+    transition: all 1.5s ease;
+    transition-delay: 0.2s;
+}
+
+.show{
+ transform: translateY(0px);
+  opacity: 1;
+}

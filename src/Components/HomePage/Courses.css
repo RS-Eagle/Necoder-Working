@@ -1,0 +1,75 @@
+.op{
+    opacity: 0;
+}
+.newColor1{
+    color: #59A6AE;
+    animation: animator 1.5s forwards ease-out;
+
+
+}
+.newColor2{
+    color: #455A64;
+    animation: animator1 1.5s forwards ease-out;
+
+
+}
+.newColor3{
+    color: #fa8352;
+    animation: animator2 1.5s forwards ease-out;
+
+
+}
+.newColor4{
+    color: #59A6AE;
+    animation: animator3 1.5s forwards ease-out;
+
+
+}
+.newColor5{
+    color: #455A64;
+    animation: animator4 1.5s forwards ease-out;
+
+
+}
+
+
+@keyframes animator {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animator1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animator2 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animator3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animator4 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

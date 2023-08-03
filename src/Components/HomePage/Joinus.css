@@ -1,0 +1,25 @@
+.image1 {
+  opacity: 0;
+  transform: translate(35px);
+
+  transition: all 1s ease;
+  transition-delay: 0.2s;
+}
+
+.show-1 {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+.image2 {
+  opacity: 0;
+  transform: translate(-35px);
+
+  transition: all 1s ease;
+  transition-delay: 0.2s;
+}
+
+.show-2 {
+  transform: translate(0px);
+  opacity: 1;
+}
