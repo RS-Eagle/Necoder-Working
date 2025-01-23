@@ -1,85 +1,115 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
-import logo from "../img/net-coder-logo.png";
-import "./Navbar.css";
+import logo1 from "../img/main.png";
+import logo2 from "../img/main2.png";
 
-const Navbar = () => {
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+
+const Navbar = ({ validate, logo }) => {
   const [menu, setmenu] = useState(false);
-  const [navValu, setnavVal] = useState("Home");
+  console.log(validate);
 
   const collapse = () => {
     setmenu(!menu);
   };
   return (
-    <div>
+    <div className="navbarr">
       <nav>
         <div className="img">
-          <img src={logo} alt="" style={{height: "126px",
-    width: "126px"}} width="100" height="100"/>
+          <Link to={"/"}>
+            <img
+              src={logo ? logo1 : logo2}
+              alt=""
+              style={{ height: "80px", width: "140px" }}
+              width="100"
+              height="100"
+              className="mt-2"
+            />
+          </Link>
         </div>
-        <div className="links linkss" style={{color:"#59A6AE"}}>
-          <div className="links-menu">
-            {menu ? (
-              <span className="span"></span>
-            ) : (
-              <span className="span">{navValu}</span>
-            )}
+        <div className={menu ? " nav_res" : " "}>
+          <div
+            className={logo ? "links " : "links linkss"}
+            style={{ color: "#59A6AE" }}
+          >
+            <div className="links-menu">
+              {menu ? (
+                <span className="span"></span>
+              ) : (
+                <Link
+                  className="nav-text"
+                  to={`/${validate == "Home" ? "" : validate.toLowerCase()}`}
+                >
+                  {" "}
+                  <span className="span">{validate}</span>
+                </Link>
+              )}
 
-            <div className={menu ? "newshow" : "newlinks"}>
-              <span
-                className="span"
-                onClick={() => {
-                  setnavVal("Home");
-                  collapse();
-                }}
-              >
-                Home
-              </span>
-              <span
-                className="span"
-                onClick={() => {
-                  setnavVal("About");
-                  collapse();
-                }}
-              >
-                About
-              </span>
-              <span
-                className="span"
-                onClick={() => {
-                  setnavVal("Course");
-                  collapse();
-                }}
-              >
-                Course
-              </span>
-              <span
-                className="span"
-                onClick={() => {
-                  setnavVal("Contact");
-                  collapse();
-                }}
-              >
-                Contact
-              </span>
+              <div className={menu ? "newshow " : "newlinks "}>
+                <span
+                  className="span"
+                  onClick={() => {
+                    collapse();
+                  }}
+                >
+                  <Link className="nav-text" to={"/"}>
+                    {" "}
+                    Home
+                  </Link>
+                </span>
+                <span
+                  className="span"
+                  onClick={() => {
+                    collapse();
+                  }}
+                >
+                  <Link className="nav-text" to={"/about"}>
+                    {" "}
+                    About
+                  </Link>
+                </span>
+                <span
+                  className="span"
+                  onClick={() => {
+                    collapse();
+                  }}
+                >
+                  <Link className="nav-text" to={"/courses"}>
+                    {" "}
+                    Course
+                  </Link>
+                </span>
+                <span
+                  className="span"
+                  onClick={() => {
+                    collapse();
+                  }}
+                >
+                  <Link className="nav-text" to={"/contact"}>
+                    {" "}
+                    Contact
+                  </Link>
+                </span>
+              </div>
             </div>
-          </div>
 
-          <div className="icons">
-            {menu ? (
-              <FontAwesomeIcon
-                className="icon"
-                onClick={collapse}
-                icon={faXmark}
-              />
-            ) : (
-              <FontAwesomeIcon
-                className="icon"
-                onClick={collapse}
-                icon={faBars}
-              />
-            )}
+            <div className="icons">
+              {menu ? (
+                <FontAwesomeIcon
+                  className="icon"
+                  onClick={collapse}
+                  icon={faXmark}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  className="icon"
+                  onClick={collapse}
+                  icon={faBars}
+                />
+              )}
+            </div>
           </div>
         </div>
       </nav>

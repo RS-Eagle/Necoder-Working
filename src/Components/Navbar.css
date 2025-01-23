@@ -1,25 +1,51 @@
+.navbarr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 2;
+}
 nav {
+  width: 90%;
   height: 100px;
   /* width: 100%; */
-  padding: 0 5%;
-  background: white;
+  margin: 0 5%;
+  /* background-color: white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  /* border-bottom: 1px solid #fa8352; */
+  box-sizing: border-box;
 }
 
 nav .img img {
   height: 80px;
 }
 
-nav .links .span {
-  margin-right: 20px;
-  font-size: 18px;
+.links .span,
+.links a,
+.links .icon {
+  color: black;
+}
+
+.linkss .span,
+.linkss a,
+.linkss .icon {
   color: white;
 }
 
+nav .links .span {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.nav-text {
+  display: inline;
+}
+
 nav .links .icon {
-  color: white;
   font-size: 18px;
   cursor: pointer;
   display: inline-block;
@@ -30,6 +56,12 @@ nav .links .icon {
 nav .links .links-menu {
   display: inline-block;
   transition: all 0.3s ease;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  /* color: black; */
 }
 
 .newlinks {
@@ -45,3 +77,40 @@ nav .links .links-menu {
   color: #fa8352;
 }
 
+@media screen and (max-width: 767px) {
+  .nav_res {
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0%;
+    right: -6%;
+    height: 50vh;
+    background-color: #fa8352;
+    border-end-start-radius: 20%;
+    box-shadow: -10px 10px 20px black;
+    width: 35vw;
+    padding-top: 40px;
+    animation: nav 0.5s ease-in-out alternate;
+  }
+  .nav_res .links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .nav_res .icons {
+    display: block;
+  }
+  .nav_res .icon {
+    text-align: center;
+    color: white;
+  }
+
+  @keyframes nav {
+    0% {
+      right: -40%;
+    }
+    100% {
+      right: -6%;
+    }
+  }
+}

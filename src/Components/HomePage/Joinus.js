@@ -4,12 +4,11 @@ import first from "../../img/frst.png";
 import second from "../../img/scnd.png";
 import third from "../../img/thrd.png";
 import fourth from "../../img/fourth.png";
-import { useInView } from 'react-intersection-observer'
-import "./Joinus.css"
+import { useInView } from "react-intersection-observer";
+import "./Joinus.css";
 const Joinus = () => {
   const { ref: imageref1, inView: imagevisible1 } = useInView();
   const { ref: imageref2, inView: imagevisible2 } = useInView();
-   
 
   return (
     <div>
@@ -18,9 +17,13 @@ const Joinus = () => {
           Who Can Join Our Courses?
         </h2>
 
-        <div ref={imageref1} className={imagevisible1 ? "row center image1 show-1": "row center image1"}>
-           
-          <div  className="col-lg-12 mt-5 text-lg-end ">
+        <div
+          ref={imageref1}
+          className={
+            imagevisible1 ? "row center image1 show-1" : "row center image1"
+          }
+        >
+          <div className="col-lg-12 mt-5 text-lg-end ">
             <img
               src={e1}
               alt=""
@@ -28,7 +31,6 @@ const Joinus = () => {
               height="auto"
               width="4%"
             />
-         
           </div>
           <div className="col-lg-6 mt-5  text-center">
             <img
@@ -50,7 +52,10 @@ const Joinus = () => {
           </div>
         </div>
 
-        <div ref={imageref2} className={imagevisible2 ? "row  image2 show-2": "row  image2"}>
+        <div
+          ref={imageref2}
+          className={imagevisible2 ? "row  image2 show-2" : "row  image2"}
+        >
           <div className="col-lg-6 mt-lg-5  text-center">
             <img
               src={third}

@@ -1,0 +1,49 @@
+.read1 {
+  border: none;
+  color: rgba(89, 166, 174, 0.7);
+  font-weight: bold;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.read1 > svg,
+.read1 > p {
+  position: absolute;
+  top: 0%;
+}
+
+.hoverableNew {
+  left: 0%;
+  transition: all 0.3s ease;
+}
+
+.hoverableNew path {
+  fill: rgba(89, 166, 174, 0.7);
+}
+.hoverablepNew {
+  right: 10%;
+  transition: all 0.3s ease;
+}
+
+.hoveredNew,
+.hoveredNew path {
+  left: 70%;
+  color: rgba(69, 90, 100, 0.8);
+  fill: rgba(69, 90, 100, 0.8);
+}
+.hoveredpNew {
+  right: 30%;
+  color: rgba(69, 90, 100, 0.8);
+}
+
+.read1 > p {
+  font-size: 20px;
+  margin-top: 11px;
+}

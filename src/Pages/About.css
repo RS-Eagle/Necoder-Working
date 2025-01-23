@@ -1,0 +1,105 @@
+.centered {
+  position: absolute;
+  top: 0%;
+  left: 7%;
+}
+.centerd {
+  position: absolute;
+  top: 0%;
+  left: 7%;
+}
+.reason {
+  width: 80%;
+  color: white;
+}
+
+.slide1 {
+  position: relative;
+  width: 75%;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.slide1:hover .overlay {
+  height: 100%;
+  border: none;
+}
+
+.slide1:hover {
+  border: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.black {
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .centered {
+    text-align: start;
+    left: 0%;
+  }
+
+  .centerd {
+    position: relative;
+    text-align: start;
+    left: 0%;
+  }
+  .reason {
+    color: black;
+    width: 100%;
+  }
+  .black {
+    color: #59a6ae;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .centered {
+    text-align: start;
+    left: 0%;
+  }
+  .tech2 {
+    margin-top: 10%;
+  }
+  .centerd {
+    left: 0;
+    position: relative;
+  }
+  .reason {
+    width: 100%;
+    color: #000000;
+  }
+  .black {
+    color: #59a6ae;
+  }
+}

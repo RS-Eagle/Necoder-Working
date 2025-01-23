@@ -1,0 +1,101 @@
+.background {
+  position: relative;
+  /* text-align: center; */
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  /* top: 40%; */
+  /* left: 7%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* margin-top: 20px; */
+}
+
+.newbtnclass {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.read2 {
+  border: none;
+  color: white;
+  font-weight: bold;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.read2 > svg,
+.read2 > p {
+  position: absolute;
+  top: 0%;
+}
+
+.hoverableNew2 {
+  left: 0%;
+  transition: all 0.3s ease;
+}
+.hoverablepNew2 {
+  right: 10%;
+  transition: all 0.3s ease;
+}
+.hoverableNew2 path {
+  fill: white;
+}
+.hoveredNew2,
+.hoveredNew2 path {
+  left: 70%;
+  fill: rgba(89, 166, 174, 0.7);
+}
+.hoveredpNew2 {
+  right: 30%;
+  color: rgba(89, 166, 174, 0.7);
+}
+
+.read2 > p {
+  font-size: 20px;
+  margin-top: 11px;
+}
+
+@media screen and (max-width: 766px) {
+  .newflex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 458px) {
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.adjustment-img {
+  width: "100%";
+  height: 350px;
+}
+
+@media screen and (max-width: 458px) {
+  .adjustment-img {
+    height: 250px;
+  }
+  .adjustment-h1 {
+    font-size: 22px;
+  }
+  .adjustment-p {
+    font-size: 12px;
+  }
+}

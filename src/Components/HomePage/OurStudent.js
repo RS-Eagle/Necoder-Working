@@ -1,19 +1,19 @@
-import React from 'react'
-import { useInView } from 'react-intersection-observer'
+import React from "react";
+import { useInView } from "react-intersection-observer";
 import star from "../../img/star.png";
-import "./OurStudent.css"
+import "./OurStudent.css";
 
 const OurStudent = () => {
   const { ref: ourStudentsref, inView: ourvisible } = useInView();
   return (
-    <div ref={ourStudentsref} className={!ourvisible? "our" : "our show"} >
+    <div ref={ourStudentsref} className={!ourvisible ? "our" : "our show"}>
       <div className="container mt-5 pt-lg-5 py-lg-5 ">
         <div className="row  p-lg-5 p-md-4 outline">
           <h2 className="pt-3 text-center fw-bold" style={{ color: "#FA8352" }}>
             What Our Students <br />
             Have To Say
           </h2>
-          <div className="col-lg-12 text-center mt-3 pt-lg-5">
+          <div className="col-lg-12 text-center pt-lg-3">
             <img
               src={star}
               alt=""
@@ -49,7 +49,7 @@ const OurStudent = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurStudent
+export default OurStudent;

@@ -1,0 +1,93 @@
+.buttonColorChange {
+  background-color: #fa8352 !important;
+  color: white !important;
+}
+
+.backgroundColorborder {
+  background-color: #f9f4f1 !important;
+  border: 1px solid black !important;
+}
+
+.buttonColor {
+  background-color: #f9f4f1 !important;
+}
+
+#acoordion {
+  margin: 10px auto;
+  width: 80%;
+  margin-bottom: 22px;
+}
+
+.first_acc {
+  margin: 100px;
+}
+
+#acoordion li {
+  list-style: none;
+  width: 100%;
+
+  padding-left: 5px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+#acoordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+li span {
+  transform: rotate(90deg);
+  font: 22px;
+  color: #333;
+}
+
+#acoordion label + input[type="radio"] {
+  display: none;
+}
+
+#acoordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.8s;
+}
+
+#acoordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+#acoordion li label p {
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  #acoordion {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  ul {
+    padding: 0;
+  }
+
+  #acoordion li label p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #acoordion li label p {
+    font-size: 15px;
+  }
+  #acoordion li {
+    padding: 0;
+  }
+}

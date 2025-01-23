@@ -1,0 +1,43 @@
+.read {
+  border: none;
+  color: #fa8352;
+  font-weight: bold;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.read > svg,
+.read > p {
+  position: absolute;
+  top: 0%;
+}
+
+.hoverable {
+  left: 0%;
+  transition: all 0.3s ease;
+}
+.hoverablep {
+  right: 10%;
+  transition: all 0.3s ease;
+}
+
+.hovered,
+.hovered path {
+  left: 70%;
+  fill: rgba(89, 166, 174, 0.7);
+}
+.hoveredp {
+  right: 30%;
+  color: rgba(89, 166, 174, 0.7);
+}
+
+.read > p {
+  font-size: 20px;
+  margin-top: 11px;
+}
